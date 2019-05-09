@@ -1,7 +1,7 @@
 class Onefetch < Formula
+  desc "Git summary on your terminal"
   homepage "https://github.com/o2sh/onefetch"
   url "https://github.com/o2sh/onefetch/archive/v1.5.4.tar.gz"
-  desc "Git summary on your terminal"
   head "https://github.com/o2sh/onefetch.git"
 
   depends_on "rust"
