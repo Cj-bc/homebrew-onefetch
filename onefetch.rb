@@ -1,14 +1,13 @@
 class Onefetch < Formula
   homepage "https://github.com/o2sh/onefetch"
-  version "1.5.4"
-  url "https://github.com/o2sh/onefetch/archive/v#{version}.tar.gz"
+  url "https://github.com/o2sh/onefetch/archive/v1.5.4.tar.gz"
+  desc "Git summary on your terminal"
   head "https://github.com/o2sh/onefetch.git"
 
   depends_on "rust"
 
   def install
-    system "cargo", "build", "--release"
     # bin path is now hard-coded in Makefile so that I install manually
-    bin.install "target/release/onefetch"
+    system "cargo", "install", "--root", prefix, "--path", "."
   end
 end
