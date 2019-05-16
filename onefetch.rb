@@ -10,4 +10,11 @@ class Onefetch < Formula
     # bin path is now hard-coded in Makefile so that I install manually
     system "cargo", "install", "--root", prefix, "--path", "."
   end
+
+  test do
+    cp prefix, testpath/"targetDir"
+    # TODO: -- Checkout specific tag here
+    system bin/"onefetch", testpath/"targetDir"
+    # TODO: -- Assert
+  end
 end
